@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corpo sem sangue é encontrado em Baltimore | Observador Global</title>
+  <meta name="description" content="Caso registrado em Baltimore, nos Estados Unidos, mobiliza polícia e autoridades de saúde após corpo ser encontrado sem nenhuma gota de sangue." />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #dbe2ea;
+      --accent: #b91c1c;
+      --accent-dark: #7f1d1d;
+      --chip: #eef2ff;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      background: #0f172a;
+      color: #fff;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .topbar-inner,
+    .container,
+    .footer-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ef4444, #7f1d1d);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(239, 68, 68, 0.28);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 18px;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.94rem;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 32px 0 18px;
+    }
+
+    .breaking {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fee2e2;
+      color: var(--accent-dark);
+      border: 1px solid #fecaca;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .headline-wrap {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .headline-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 0;
+    }
+
+    .headline-copy {
+      padding: 34px 34px 28px;
+    }
+
+    .category {
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.45rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .dek {
+      margin: 18px 0 22px;
+      font-size: 1.14rem;
+      color: #374151;
+      max-width: 58ch;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-image {
+      min-height: 100%;
+      position: relative;
+      background: #111827;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 12px 16px 16px;
+      font-size: 0.9rem;
+      color: #d1d5db;
+      background: linear-gradient(to top, rgba(3, 7, 18, 0.94), rgba(3, 7, 18, 0.72));
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(280px, 0.9fr);
+      gap: 28px;
+      margin: 28px 0 40px;
+      align-items: start;
+    }
+
+    .article,
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .article {
+      padding: 30px 30px 24px;
+    }
+
+    .article p {
+      margin: 0 0 18px;
+      font-size: 1.06rem;
+      color: #1f2937;
+    }
+
+    .article p.lead::first-letter {
+      float: left;
+      font-size: 3.35rem;
+      line-height: 0.9;
+      padding-right: 10px;
+      font-weight: 800;
+      color: var(--accent-dark);
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    blockquote {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: #fff7f7;
+      border-radius: 14px;
+      color: #374151;
+      font-size: 1.05rem;
+    }
+
+    .source-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: #334155;
+      font-size: 0.9rem;
+      border: 1px solid #dbeafe;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 18px;
+      position: sticky;
+      top: 18px;
+    }
+
+    .sidebar-card {
+      padding: 22px;
+    }
+
+    .sidebar-title {
+      margin: 0 0 16px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .fact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fact {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.93rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .fact span {
+      font-size: 1.02rem;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .alert-box {
+      background: linear-gradient(180deg, #fff7ed, #fff);
+      border: 1px solid #fed7aa;
+    }
+
+    .alert-box ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #7c2d12;
+    }
+
+    .alert-box li + li { margin-top: 8px; }
+
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      margin-top: 36px;
+      border-top: 4px solid var(--accent);
+    }
+
+    .footer-inner {
+      padding: 22px 0 28px;
+      font-size: 0.94rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid var(--line);
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 940px) {
+      .headline-grid,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 320px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .headline-copy,
+      .article,
+      .sidebar-card {
+        padding: 22px;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .dek,
+      .article p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">OG</div>
+        <div>Observador Global</div>
+      </div>
+      <nav class="top-links" aria-label="Seções">
+        <a href="#">Mundo</a>
+        <a href="#">Saúde</a>
+        <a href="#">Segurança</a>
+        <a href="#">Investigação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="breaking">Urgente · Estados Unidos</div>
+
+      <div class="headline-wrap">
+        <div class="headline-grid">
+          <div class="headline-copy">
+            <div class="category">Mundo · Saúde · Segurança</div>
+            <h1>Corpo sem nenhuma gota de sangue é encontrado em prédio isolado nos Estados Unidos</h1>
+            <p class="dek">Caso foi registrado em Baltimore, no estado de Maryland. Equipes forenses e agentes com trajes de proteção biológica foram mobilizados, e autoridades investigam a suspeita de um possível novo vírus.</p>
+            <div class="meta">
+              <span><strong>Por Jonathan Reeves</strong></span>
+              <span>22/03/2026 19h40</span>
+              <span>Atualizado em 22/03/2026 22h13</span>
+            </div>
+          </div>
+
+          <figure class="hero-image">
+            <img src="crime-scene-baltimore.jpg" alt="Cena isolada com investigadores em um prédio abandonado em Baltimore" />
+            <figcaption class="caption">Equipes forenses e agentes de contenção biológica atuam em prédio isolado em Baltimore, Maryland, após a descoberta de um corpo em circunstâncias incomuns.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <article class="article">
+        <p class="lead">Um corpo encontrado dentro de um prédio abandonado em <strong>Baltimore, Maryland, nos Estados Unidos</strong>, mobilizou autoridades locais neste sábado e levantou suspeitas sobre a possível atuação de <strong>um novo vírus ainda não identificado</strong>. A área foi isolada após moradores denunciarem movimentação incomum no imóvel e um forte odor vindo do interior da construção.</p>
+
+        <p>Pouco depois, equipes da polícia, peritos criminais e profissionais com trajes de contenção biológica entraram no local para iniciar a investigação. De acordo com informações preliminares repassadas por fontes ligadas ao caso, a vítima foi encontrada em uma condição considerada altamente incomum: <strong>sem nenhuma gota de sangue no corpo</strong>.</p>
+
+        <h2>Ausência total de sangue intriga investigadores</h2>
+        <p>Segundo os primeiros relatos da perícia, a análise inicial do cadáver apontou ausência completa de sangue no organismo, sem que houvesse, no ambiente, sinais visíveis de hemorragia em volume compatível com a condição da vítima. O detalhe chamou a atenção dos investigadores e fez com que a ocorrência passasse a ser tratada com cautela especial.</p>
+
+        <p>Até o momento, a identidade da pessoa morta não foi oficialmente divulgada. O prédio permanece interditado, e a circulação no quarteirão foi restringida para coleta de amostras e análise do material encontrado na cena.</p>
+
+        <blockquote>“Trata-se de uma cena fora do padrão habitual e que exige análise laboratorial urgente”, afirmou uma fonte ligada à investigação, sob condição de anonimato.</blockquote>
+
+        <h2>Hipótese de novo vírus está entre as principais linhas de apuração</h2>
+        <p>Em nota preliminar, autoridades envolvidas na ocorrência afirmaram que ainda não há conclusão sobre a causa da morte, mas confirmaram que uma das hipóteses analisadas é a presença de <strong>um possível novo agente viral</strong>. A suspeita ganhou força após os primeiros exames não indicarem, de forma imediata, sinais típicos de agressão, ferimentos externos graves ou mecanismos convencionais que expliquem a ausência total de sangue no corpo.</p>
+
+        <p>Testemunhas da região disseram ter visto pessoas entrando e saindo do imóvel nos últimos dias, principalmente durante a noite. Alguns moradores também relataram sons incomuns vindos da construção pouco antes da chegada das autoridades. A polícia agora tenta identificar quem frequentava o prédio e se o caso pode ter relação com outros episódios considerados estranhos registrados recentemente em áreas urbanas da costa leste norte-americana.</p>
+
+        <h2>Área segue isolada, mas ainda não há confirmação de surto</h2>
+        <p>Órgãos locais de saúde pública acompanham a investigação em conjunto com as forças de segurança. Até a última atualização desta reportagem, não havia confirmação oficial de surto nem ordem de evacuação para os arredores. Mesmo assim, o perímetro foi mantido sob isolamento, e moradores próximos foram orientados a evitar contato com resíduos, objetos ou fluidos encontrados nas imediações.</p>
+
+        <p>Caso a suspeita de um novo vírus seja confirmada, autoridades admitem que o episódio poderá levar a uma resposta mais ampla em nível estadual ou federal.</p>
+
+        <div class="source-list" aria-label="Fontes">
+          <span class="chip">Baltimore Police Department</span>
+          <span class="chip">Maryland Department of Health</span>
+          <span class="chip">Testemunhas locais</span>
+          <span class="chip">Documentos preliminares da investigação</span>
+        </div>
+
+        <div class="tag-row" aria-label="Tags">
+          <span class="tag">Estados Unidos</span>
+          <span class="tag">Baltimore</span>
+          <span class="tag">Maryland</span>
+          <span class="tag">Vírus</span>
+          <span class="tag">Investigação</span>
+          <span class="tag">Saúde pública</span>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <section class="sidebar-card">
+          <h3 class="sidebar-title">Resumo do caso</h3>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Local</strong>
+              <span>Baltimore, Maryland, EUA</span>
+            </div>
+            <div class="fact">
+              <strong>Data</strong>
+              <span>22 de março de 2026</span>
+            </div>
+            <div class="fact">
+              <strong>Ocorrência</strong>
+              <span>Corpo encontrado sem sangue</span>
+            </div>
+            <div class="fact">
+              <strong>Linha de investigação</strong>
+              <span>Possível novo vírus</span>
+            </div>
+            <div class="fact">
+              <strong>Status</strong>
+              <span>Área isolada e exames em andamento</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="sidebar-card alert-box">
+          <h3 class="sidebar-title">Orientação às pessoas próximas</h3>
+          <ul>
+            <li>Evitar contato com resíduos, objetos ou fluidos encontrados na área.</li>
+            <li>Procurar atendimento médico em caso de febre alta, confusão mental ou sangramentos incomuns.</li>
+            <li>Seguir apenas comunicados oficiais das autoridades locais.</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>Observador Global · Portal de notícias fictício para ambientação de RPG</div>
+      <div>Publicado em 22/03/2026 · Última atualização às 22h13</div>
+    </div>
+  </footer>
+</body>
+</html>
